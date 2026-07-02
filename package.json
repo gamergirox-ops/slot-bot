@@ -1,17 +1,12 @@
 {
-  "name": "workspace",
-  "version": "0.0.0",
-  "license": "MIT",
+  "name": "slot-bot",
+  "version": "1.0.0",
+  "main": "index.mjs",
+  "type": "module",
   "scripts": {
-    "preinstall": "node -e \"if (!process.env.npm_config_user_agent?.includes('pnpm')) { console.error('Utilisez pnpm'); process.exit(0); }\"",
-    "build": "pnpm run typecheck && pnpm -r --if-present run build",
-    "typecheck:libs": "tsc --build",
-    "packageManager": "pnpm@9.15.9",
-    "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck"
+    "start": "node index.mjs"
   },
-  "private": true,
-  "devDependencies": {
-    "prettier": "^3.8.3",
-    "typescript": "~5.9.3"
+  "dependencies": {
+    "discord.js": "^14.15.0"
   }
 }
